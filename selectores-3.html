@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: salmon
+        }
+        p::first-letter {
+            color: teal;
+        }
+        p::before {
+            content:"😎" ;
+        }
+        p::after {
+            content:"🤫" ;
+        }
+        p:hover {
+            color: skyblue
+        }
+        div p:nth-child(2) {
+        color: violet;
+        }
+        ::placeholder {
+            color: tomato;
+        }
+        a {
+            color: red;
+        }
+        a[href="https://www.youtube.com/watch?v=KdiYZie5dBk&ab_channel=NickyJamTV"] {
+            color: aquamarine;
+        }
+        input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: .2em .4em;
+  border-radius: .2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+input:in-range {
+    background-color: #a29bfe; 
+}
+input:out-of-range {
+    background-color: #a29bfe; 
+    border: 2px solid green
+}
+input:in-range + p::after {
+      content: 'Mayor de edad. 🚀';
+    }
+    
+    input:out-of-range + p::after {
+      content: 'Menor de edad. 🙈';
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <p>platzi</p>
+        <p>master</p>
+        <p>lo mejor</p>
+    </div>
+    <form>
+        <label for="fileupload">Upload File</label>
+        <input type="file" id="fileupload">
+    </form>
+    <input type="text" placeholder="name">
+    <a href="https://www.youtube.com/watch?v=KdiYZie5dBk&ab_channel=NickyJamTV">regueton meloski</a>
+    <label for="age">introduce tu edad y a ver si es mayor o menor</label>
+    <input type="number" name="age" id="age" min="18" max="150" value="14">
+    <p>Eres: </p>
+</body>
+</html>
